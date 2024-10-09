@@ -1,6 +1,6 @@
 aiohttp==3.8.1
 discord.py==2.0.1
-Pillow==10.0.0   # Update to a stable version that has pre-built wheels
-pandas==2.0.3    # Update to the latest compatible version
-streamlit==1.24.0 # Update to a stable version that is compatible with other libraries
+Pillow==9.5.0   # Compatible version
+pandas==2.0.3    # Use the latest stable version
+streamlit==1.24.0
 python-dotenv
