@@ -189,76 +189,122 @@ def create_collage(images, output_path, event_name="Event Name"):
     text_bbox = draw.textbbox((0, 0), event_name, font=welcome_font)
     text_width = text_bbox[2] - text_bbox[0]
     text_x = (background.width - text_width) // 2
-    text_y = 210
-
+    text_y = 228
     draw.text((text_x, text_y), event_name, fill=(255, 255, 255), font=welcome_font)
 
-    background.save(output_path)
-    return output_path
+    current_date = datetime.date.today().strftime("%Y-%m-%d")
+    date_font = ImageFont.truetype(os.path.join(os.getcwd(), "Fonts", "CruyffSansCondensed-Bold.otf"), size=137)
+    text_bbox = draw.textbbox((0, 0), current_date, font=date_font)
+    date_text_width = text_bbox[2] - text_bbox[0]
+    date_x = background.width - date_text_width - 50
+    draw.text((date_x, text_y), current_date, fill=(255, 255, 255), font=date_font)
 
-# Function to send image to Discord channel
-async def send_to_discord(file_path):
-    try:
-        if BOT_TOKEN and DISCORD_CHANNEL_ID:
-            client = discord.Client(intents=discord.Intents.default())
+    background.save(output_path, format="PNG", dpi=(300, 300))
 
-            @client.event
-            async def on_ready():
-                print(f"Logged in as {client.user}")
-                channel = client.get_channel(int(DISCORD_CHANNEL_ID))
-                if channel:
-                    with open(file_path, 'rb') as f:
-                        picture = discord.File(f)
-                        await channel.send(file=picture)
-                await client.close()
+# Function to send the collage image to Discord
+async def send_collage_to_discord(collage_path):
+    intents = discord.Intents.default()
+    client = discord.Client(intents=intents)
 
-            await client.start(BOT_TOKEN)
+    async def send_image():
+        channel = client.get_channel(int(DISCORD_CHANNEL_ID))
+        if channel:
+            with open(collage_path, 'rb') as f:
+                picture = discord.File(f)
+                await channel.send(file=picture)
         else:
-            print("Bot token or channel ID not set.")
-    except Exception as e:
-        print(f"Error sending image to Discord: {e}")
+            print("Channel not found")
 
-# Function to read CSV data and process images and collages
-async def process_and_send_collage(urls_file, csv_file, code, event_name, card_type):
-    urls = read_urls_from_file(urls_file)
-    previous_valid_urls = read_previous_valid_urls(code)
-    csv_data = pd.read_csv(csv_file).set_index('ID')
+    @client.event
+    async def on_ready():
+        await send_image()
+        await client.close()
 
-    output_data, valid_numbers = await process_urls(urls, code, csv_data, previous_valid_urls)
+    await client.start(BOT_TOKEN)
 
-    generated_images = []
-    output_dir = LIVE_CARDS_DIR if card_type == 'LIVE' else ICON_CARDS_DIR
-
-    background_image = 'Leaks_Live.png' if card_type == 'LIVE' else 'Leaks_Icon.png'
-    
-    for player in output_data:
-        player_name = player['Name']
-        player_country = player['Country']
-        player_league = player['League']
-        player_club = player.get('Club', 'Unknown')
-        image_path = generate_card_image(player_name, player_country, player_league, player_club, background_image, output_dir, card_type)
-        if image_path:
-            generated_images.append(Image.open(image_path))
-
-    if generated_images:
-        collage_path = os.path.join(output_dir, f"{code}_collage.png")
-        create_collage(generated_images, collage_path, event_name)
-        await send_to_discord(collage_path)
-
-    write_valid_urls(code, valid_numbers)
-
-# Streamlit Interface
+# Streamlit main function
 def main():
-    st.title("Image Generator and Discord Sender")
-    
-    urls_file = st.text_input("Enter the path to the URLs file", "urls.txt")
-    csv_file = st.text_input("Enter the path to the CSV file", "players.csv")
-    code = st.text_input("Enter the code for replacement", "123")
-    event_name = st.text_input("Enter the event name", "Event Name")
-    card_type = st.selectbox("Select card type", ['LIVE', 'ICON'])
-    
-    if st.button("Generate and Send Collage"):
-        asyncio.run(process_and_send_collage(urls_file, csv_file, code, event_name, card_type))
+    st.title("Player Card Generator")
 
-if __name__ == '__main__':
+    event_name = st.text_input("Enter the event name for the collage")
+    if not event_name:
+        st.warning("Please enter an event name.")
+        return
+
+    choice = st.radio("What type of cards do you want to generate?", ('LIVE', 'ICONS'))
+
+    if choice == 'LIVE':
+        urls_file = 'urls.txt'
+        csv_file = 'player_data.csv'
+        output_dir = LIVE_CARDS_DIR
+    else:
+        urls_file = 'iconurls.txt'
+        csv_file = 'IconCardData.csv'
+        output_dir = ICON_CARDS_DIR
+
+    code = st.text_input("Enter the code to replace CODE in the URLs")
+    if not code:
+        st.warning("Please enter a code.")
+        return
+
+    # Load previously valid URLs for the given code
+    previous_valid_urls = read_previous_valid_urls(code)
+
+    # Read the CSV data
+    csv_data = pd.read_csv(csv_file, index_col='ID')
+
+    # Read URLs from the specified file
+    urls = read_urls_from_file(urls_file)
+    if not urls:
+        st.warning("No URLs found in the file.")
+        return
+
+    # Upload background image for the cards
+    background_image = st.file_uploader("Upload the card background image", type=["png"])
+    if not background_image:
+        st.warning("Please upload a background image.")
+        return
+
+    if st.button("Process URLs and Generate Cards"):
+        st.info("Processing URLs, please wait...")
+
+        # Process URLs while excluding previously valid URLs
+        output_data, valid_numbers = asyncio.run(process_urls(urls, code, csv_data, previous_valid_urls))
+
+        # Write valid URLs to the file
+        write_valid_urls(code, valid_numbers)
+
+        st.write(f"Valid numbers found: {valid_numbers}")
+
+        image_paths = []
+        for player in output_data:
+            name = player['Name']
+            country = player['Country']
+            league = player['League']
+            club = player['Club'] if choice == 'LIVE' else None  # No club for ICON cards
+
+            image_path = generate_card_image(name, country, league, club, background_image, output_dir, choice)  # Pass choice as card_type
+            if image_path:
+                image_paths.append(image_path)
+
+        if image_paths:
+            st.success("Player cards generated successfully!")
+
+            # Create collages in batches of 28 images
+            collage_paths = []
+            for i in range(0, len(image_paths), 28):  # Process in batches of 28
+                collage_path = os.path.join(output_dir, f"{event_name}_collage_{i//28 + 1}.png")
+                images_batch = [Image.open(image_path) for image_path in image_paths[i:i + 28]]
+                create_collage(images_batch, collage_path, event_name=event_name)
+                collage_paths.append(collage_path)
+                st.image(collage_path)
+
+                # Send each collage to Discord
+                asyncio.run(send_collage_to_discord(collage_path))
+                st.success(f"Collage {i//28 + 1} sent to Discord successfully!")
+        else:
+            st.error("No images were generated.")
+
+if __name__ == "__main__":
     main()
+
