@@ -1,0 +1,5 @@
+aiohttp==3.8.1
+discord.py==2.0.1
+Pillow==9.2.0
+pandas==1.5.1
+streamlit==1.14.0
