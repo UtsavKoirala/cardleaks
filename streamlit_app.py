@@ -230,7 +230,7 @@ async def send_collage_to_discord(collage_path):
 def main():
     st.title("Player Card Generator")
 
-    event_name = st.text_input("Enter the event name for the collage")
+    event_name = st.text_input("Enter the event name")
     if not event_name:
         st.warning("Please enter an event name.")
         return
@@ -246,7 +246,7 @@ def main():
         csv_file = 'IconCardData.csv'
         output_dir = ICON_CARDS_DIR
 
-    code = st.text_input("Enter the code to replace CODE in the URLs")
+    code = st.text_input("Enter the code")
     if not code:
         st.warning("Please enter a code.")
         return
