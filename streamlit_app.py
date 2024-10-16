@@ -205,13 +205,17 @@ def create_collage(images, output_path, event_name="Event Name"):
 async def send_collage_to_discord(collage_path):
     intents = discord.Intents.default()
     client = discord.Client(intents=intents)
+    
+    leaks_role_id = os.getenv('DISCORD_LEAKS_ROLE_ID')  # Retrieve the Leaks role ID
 
     async def send_image():
         channel = client.get_channel(int(DISCORD_CHANNEL_ID))
         if channel:
             with open(collage_path, 'rb') as f:
                 picture = discord.File(f)
-                await channel.send(file=picture)
+                # Mention the Leaks role
+                role_mention = f"<@&{leaks_role_id}>"
+                await channel.send(content=f"{role_mention} Here is the latest collage:", file=picture)
         else:
             print("Channel not found")
 
