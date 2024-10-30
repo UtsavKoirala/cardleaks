@@ -44,6 +44,9 @@ https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p142707_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p142902_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p142962_CODE_ETC2.eaz
+https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193080_CODE_ETC2.eaz
+https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p140233_CODE_ETC2.eaz
+https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p198710_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p142966_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p143076_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p143121_CODE_ETC2.eaz
@@ -4231,6 +4234,9 @@ https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215097_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215107_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215108_CODE_ETC2.eaz
+https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p198710_CODE_ETC2.eaz
+https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193080_CODE_ETC2.eaz
+https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p140233_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215112_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215119_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215123_CODE_ETC2.eaz
