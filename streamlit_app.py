@@ -215,7 +215,7 @@ async def send_collage_to_discord(collage_path):
                 picture = discord.File(f)
                 # Mention the Leaks role
                 role_mention = f"<@&{leaks_role_id}>"
-                await channel.send(content=f"{role_mention} Here is the latest leaks:", file=picture)
+                await channel.send(content=f"", file=picture)
         else:
             print("Channel not found")
 
