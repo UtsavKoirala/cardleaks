@@ -45,7 +45,6 @@ https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p142902_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p142962_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193080_CODE_ETC2.eaz
-https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p140233_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p198710_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p142966_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p143076_CODE_ETC2.eaz
@@ -1310,7 +1309,6 @@ https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193059_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193061_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193077_CODE_ETC2.eaz
-https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193080_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193082_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193087_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193091_CODE_ETC2.eaz
@@ -4234,9 +4232,6 @@ https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215097_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215107_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215108_CODE_ETC2.eaz
-https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p198710_CODE_ETC2.eaz
-https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p193080_CODE_ETC2.eaz
-https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p140233_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215112_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215119_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p215123_CODE_ETC2.eaz
@@ -23857,7 +23852,6 @@ https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p74067_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p74085_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p74164_CODE_ETC2.eaz
-https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p241667_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p227203_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p227102_CODE_ETC2.eaz
 https://eaassets-a.akamaihd.net/fifa/u/f/fcm23/prod/s/static/players/players_25/p227125_CODE_ETC2.eaz
