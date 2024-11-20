@@ -264,11 +264,18 @@ def main():
         st.warning("No URLs found in the file.")
         return
 
-    # Upload background image for the cards
-    background_image = st.file_uploader("Upload the card background image", type=["png"])
-    if not background_image:
-        st.warning("Please upload a background image.")
-        return
+    # Check for the background image in the "Card Art" directory
+    card_art_dir = 'Card Art'
+    background_image_path = os.path.join(card_art_dir, f"{code}.png")  # Assuming the image is named as the code
+
+    if os.path.exists(background_image_path):
+        background_image = Image.open(background_image_path)
+        st.image(background_image, caption="Background image loaded from Card Art directory.")
+    else:
+        background_image = st.file_uploader("Upload the card background image", type=["png"])
+        if not background_image:
+            st.warning("Please upload a background image.")
+            return
 
     if st.button("Process URLs and Generate Cards"):
         st.info("Processing URLs, please wait...")
@@ -312,4 +319,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
