@@ -105,58 +105,46 @@ def resize_image(image_path, size):
 # Function to generate player card images with high DPI
 def generate_card_image(name, country, league, club, background_image, output_dir, card_type):
     try:
-        dpi = 300
+        # Debug message
+        print(f"Generating card for {name} from {country}, {league}, {club}")
+        
+        # Validate background image
+        if not os.path.exists(background_image):
+            print(f"Background image does not exist: {background_image}")
+            return None
+        
+        # Load background image
         base_image = Image.open(background_image).convert("RGBA")
-
-        if base_image.size == (256, 256):
-            base_image = base_image.resize((512, 512), Image.LANCZOS)
-
-        base_image = base_image.resize((base_image.width * 2, base_image.height * 2), Image.LANCZOS)
-        base_image.info['dpi'] = (dpi, dpi)
+        width, height = base_image.size
+        print(f"Loaded background image with dimensions: {width}x{height}")
+        
+        # Create drawing context
         draw = ImageDraw.Draw(base_image)
 
-        font_path = os.path.join(os.getcwd(), "Fonts", "CruyffSansCondensed-Bold.otf")
-        font_size_name = 90
-        font_name = ImageFont.truetype(font_path, font_size_name)
+        # Define font (update path to an existing font file on your system)
+        font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"  # Adjust path as needed
+        if not os.path.exists(font_path):
+            print("Font file not found. Using default font.")
+            font = ImageFont.load_default()
+        else:
+            font = ImageFont.truetype(font_path, size=40)
 
-        name_text_capitalized = name.upper()
-        text_bbox = draw.textbbox((0, 0), name_text_capitalized, font=font_name)
-        text_width = text_bbox[2] - text_bbox[0]
-        text_x = (base_image.width - text_width) // 2
-        text_y = 670
+        # Add text
+        text = f"{name}\n{country}\n{league}\n{club}"
+        text_x, text_y = 50, 50
+        draw.text((text_x, text_y), text, font=font, fill="white")
+        print(f"Added text to the image at position ({text_x}, {text_y})")
+        
+        # Ensure output directory exists
+        os.makedirs(output_dir, exist_ok=True)
 
-        # Set text color based on card type
-        #text_color = (255, 255, 255) if card_type == 'LIVE' else (66, 52, 15)
-        text_color = (255, 255, 255)
-        draw.text((text_x, text_y), name_text_capitalized, fill=text_color, font=font_name)
-
-        # Always use dark directory for ICONS and check background color for LIVE cards
-        flags_dir = os.path.join(os.getcwd(), "Flags")
-        league_dir = os.path.join(os.getcwd(), "Leagues_Dark")  # Always dark for ICONS
-        club_dir = os.path.join(os.getcwd(), "Clubs_Dark")  # Always dark for ICONS
-
-        country_image = resize_image(os.path.join(flags_dir, f"{country}.png"), (112, 112))
-        league_image = resize_image(os.path.join(league_dir, f"{league}.png"), (96, 96))
-        club_image = resize_image(os.path.join(club_dir, f"{club}.png"), (96, 96)) if card_type == 'LIVE' else None
-
-        # Position for logos and flags for LIVE cards
-        if card_type == 'LIVE':
-            if country_image:
-                base_image.paste(country_image, (258, 756), country_image)  # Position for the flag
-            if league_image:
-                base_image.paste(league_image, (468, 756), league_image)   # Position for the league logo
-            if club_image:
-                base_image.paste(club_image, (672, 756), club_image)  # Position for the club image
-        else:  # For ICON cards, do not use club images
-            if country_image:
-                base_image.paste(country_image, (332, 756), country_image)  # Position for the flag
-            if league_image:
-                base_image.paste(league_image, (588, 756), league_image)  # Use the dark directory for leagues
-
+        # Save image
         output_path = os.path.join(output_dir, f"{name.replace(' ', '_')}.png")
-        base_image.save(output_path, format="PNG", dpi=(dpi, dpi))
-
+        base_image.save(output_path, format="PNG", dpi=(300, 300))
+        print(f"Image saved successfully for {name} at {output_path}")
+        
         return output_path
+    
     except Exception as e:
         print(f"Error generating card image for {name}: {e}")
         return None
