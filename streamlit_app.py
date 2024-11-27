@@ -227,6 +227,9 @@ async def send_collage_to_discord(collage_path):
 
     await client.start(BOT_TOKEN)
 
+# Directory containing card background images for different codes
+CARD_ART_DIR = 'Card Art'
+
 # Streamlit main function
 def main():
     st.title("Player Card Generator")
@@ -252,6 +255,23 @@ def main():
         st.warning("Please enter a code.")
         return
 
+    # Check if the background image for the code exists in the Card Art directory
+    card_background_path = os.path.join(CARD_ART_DIR, f"{code}.png")
+    if os.path.exists(card_background_path):
+        st.info(f"Background image for code '{code}' found in the Card Art directory.")
+        background_image = card_background_path  # Use the found background image
+    else:
+        # Prompt the user to upload a background image if not found
+        st.warning(f"Background image for code '{code}' not found in the Card Art directory.")
+        uploaded_background_image = st.file_uploader("Upload the card background image", type=["png"])
+        if not uploaded_background_image:
+            st.warning("Please upload a background image.")
+            return
+        # Save the uploaded image temporarily
+        background_image = os.path.join(output_dir, f"{code}_uploaded.png")
+        with open(background_image, "wb") as f:
+            f.write(uploaded_background_image.getbuffer())
+
     # Load previously valid URLs for the given code
     previous_valid_urls = read_previous_valid_urls(code)
 
@@ -262,12 +282,6 @@ def main():
     urls = read_urls_from_file(urls_file)
     if not urls:
         st.warning("No URLs found in the file.")
-        return
-
-    # Upload background image for the cards
-    background_image = st.file_uploader("Upload the card background image", type=["png"])
-    if not background_image:
-        st.warning("Please upload a background image.")
         return
 
     if st.button("Process URLs and Generate Cards"):
@@ -309,6 +323,7 @@ def main():
                 st.success(f"Collage {i//28 + 1} sent to Discord successfully!")
         else:
             st.error("No images were generated.")
+
 
 if __name__ == "__main__":
     main()
