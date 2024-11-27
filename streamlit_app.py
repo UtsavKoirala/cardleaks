@@ -259,7 +259,7 @@ def main():
     card_background_path = os.path.join(CARD_ART_DIR, f"{code}.png")
     if os.path.exists(card_background_path):
         st.info(f"Background image for code '{code}' found in the Card Art directory.")
-        st.image(card_background_path, caption=f"Background Image for Code '{code}'", use_column_width=True)
+        st.image(card_background_path, caption=f"Background Image for Code '{code}'", width=400)
         background_image = card_background_path  # Use the found background image
     else:
         # Prompt the user to upload a background image if not found
