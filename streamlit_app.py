@@ -10,7 +10,7 @@ import discord
 
 # Discord bot token and channel ID are now loaded from environment variables
 BOT_TOKEN = os.getenv('DISCORD_BOT_TOKEN')  # Use environment variables for security
-DISCORD_CHANNEL_ID = os.getenv('DISCORD_CHANNEL_ID'
+DISCORD_CHANNEL_ID = os.getenv('DISCORD_CHANNEL_ID')
 
 # Create directories for valid URLs and generated cards
 VALID_URLS_DIR = 'valid_urls'
