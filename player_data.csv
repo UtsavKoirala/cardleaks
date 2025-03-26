@@ -1630,7 +1630,7 @@ p212622,Kimmich,Germany,Bundesliga,FC Bayern München
 p230869,Unai Simón,Spain,LALIGA EA SPORTS,Athletic Club
 p167495,Neuer,Germany,Bundesliga,FC Bayern München
 p208128,Çalhanoğlu,Turkey,Serie A Enilive,Lombardia FC
-p247635,Kvaratskhelia,Georgia,Serie A Enilive,SSC Napoli
+p247635,Kvaratskhelia,Georgia,Ligue 1 McDonald's,Paris SG
 p197445,Alaba,Austria,LALIGA EA SPORTS,Real Madrid
 p253163,Araujo,Uruguay,LALIGA EA SPORTS,FC Barcelona
 p212194,Brandt,Germany,Bundesliga,Borussia Dortmund
@@ -1697,7 +1697,7 @@ p204923,Sabitzer,Austria,Bundesliga,Borussia Dortmund
 p200145,Casemiro,Brazil,Premier League,Man Utd
 p240091,Vicario,Italy,Premier League,Spurs
 p246430,Vlahović,Serbia,Serie A Enilive,Juventus
-p188377,Walker,England,Premier League,Manchester City
+p188377,Walker,England,Serie A Enilive,Milano FC
 p231936,White,England,Premier League,Arsenal
 p224334,Acuña,Argentina,Libertadores,River Plate
 p212242,Andrich,Germany,Bundesliga,Leverkusen
@@ -1728,7 +1728,7 @@ p212218,Laporte,Spain,ROSHN Saudi League,Al Nassr
 p233486,Le Normand,Spain,LALIGA EA SPORTS,Atlético de Madrid
 p226161,Marcos Llorente,Spain,LALIGA EA SPORTS,Atlético de Madrid
 p222077,Locatelli,Italy,Serie A Enilive,Juventus
-p231447,Malen,Holland,Bundesliga,Borussia Dortmund
+p231447,Malen,Holland,Premier League,Aston Villa
 p251566,Gabriel Martinelli,Brazil,Premier League,Arsenal
 p192883,Mkhitaryan,Armenia,Serie A Enilive,Lombardia FC
 p201153,Morata,Spain,Serie A Enilive,Milano FC
@@ -1753,7 +1753,7 @@ p236499,Douglas Luiz,Brazil,Serie A Enilive,Juventus
 p199434,Tadić,Serbia,Trendyol Süper Lig,Fenerbahçe
 p247263,Tapsoba,Burkina Faso,Bundesliga,Leverkusen
 p252145,Nuno Mendes,Portugal,Ligue 1 McDonald's,Paris SG
-p228093,Thuram,France,Serie A Enilive,Lombardia FC
+p228093,M.Thuram,France,Serie A Enilive,Lombardia FC
 p232756,Tomori,England,Serie A Enilive,Milano FC
 p223959,Torreira,Uruguay,Trendyol Süper Lig,Galatasaray
 p186345,Trippier,England,Premier League,Newcastle Utd
@@ -1807,7 +1807,7 @@ p192387,Immobile,Italy,Trendyol Süper Lig,Beşiktaş
 p238074,James,England,Premier League,Chelsea
 p236987,Kamara,France,Premier League,Aston Villa
 p230938,Kessié,Côte d'Ivoire,ROSHN Saudi League,Al Ahli
-p237679,Kolo Muani,France,Ligue 1 McDonald's,Paris SG
+p237679,Kolo Muani,France,Serie A Enilive,Juventus
 p208574,Kostić,Serbia,Trendyol Süper Lig,Fenerbahçe
 p245155,Kudus,Ghana,Premier League,West Ham
 p247394,Kulusevski,Sweden,Premier League,Spurs
@@ -1829,7 +1829,7 @@ p230142,Oyarzabal,Spain,LALIGA EA SPORTS,Real Sociedad
 p209989,Partey,Ghana,Premier League,Arsenal
 p240638,Reijnders,Holland,Serie A Enilive,Milano FC
 p226271,Fabián Ruiz,Spain,Ligue 1 McDonald's,Paris SG
-p204883,Samba,France,Ligue 1 McDonald's,RC Lens
+p204883,Samba,France,Ligue 1 McDonald's,Stade Rennais FC
 p244675,Sancet,Spain,LALIGA EA SPORTS,Athletic Club
 p233049,Sancho,England,Premier League,Chelsea
 p210047,Schär,Switzerland,Premier League,Newcastle Utd
@@ -1838,7 +1838,7 @@ p205988,Shaw,England,Premier League,Man Utd
 p222737,Malcom,Brazil,ROSHN Saudi League,Al Hilal
 p189881,Smalling,England,ROSHN Saudi League,Al Fayha
 p216549,Sørloth,Norway,LALIGA EA SPORTS,Atlético de Madrid
-p212523,Anderson Talisca,Brazil,ROSHN Saudi League,Al Nassr
+p212523,Anderson Talisca,Brazil,Trendyol Süper Lig,Beşiktaş
 p176580,Suárez,Uruguay,MLS,Inter Miami CF
 p212190,Süle,Germany,Bundesliga,Borussia Dortmund
 p188943,Trapp,Germany,Bundesliga,Frankfurt
@@ -1852,7 +1852,7 @@ p235844,Álvarez,Mexico,Premier League,West Ham
 p227950,Yeray,Spain,LALIGA EA SPORTS,Athletic Club
 p229476,Anton,Germany,Bundesliga,Borussia Dortmund
 p193105,Areola,France,Premier League,West Ham
-p220834,Marco Asensio,Spain,Ligue 1 McDonald's,Paris SG
+p220834,Marco Asensio,Spain,Premier League,Aston Villa
 p263578,Balde,Spain,LALIGA EA SPORTS,FC Barcelona
 p227535,Bentancur,Uruguay,Premier League,Spurs
 p225201,Álex Berenguer,Spain,LALIGA EA SPORTS,Athletic Club
@@ -1890,6 +1890,7 @@ p204525,Iñigo Martínez,Spain,LALIGA EA SPORTS,FC Barcelona
 p236401,Mazraoui,Morocco,Premier League,Man Utd
 p235944,Brais Méndez,Spain,LALIGA EA SPORTS,Real Sociedad
 p225116,Meret,Italy,Serie A Enilive,SSC Napoli
+p75605,Raúl Asencio,LALIGA EA SPORTS,Real Madrid
 p205175,Milik,Poland,Serie A Enilive,Juventus
 p255565,Mitoma,Japan,Premier League,Brighton
 p182494,Muslera,Uruguay,Trendyol Süper Lig,Galatasaray
@@ -1898,7 +1899,7 @@ p200159,Ortega,Germany,Premier League,Manchester City
 p192366,Otamendi,Argentina,Liga Portugal,SL Benfica
 p232498,Isi Palazón,Spain,LALIGA EA SPORTS,Rayo Vallecano
 p233934,Ramsdale,England,Premier League,Southampton
-p231677,Rashford,England,Premier League,Man Utd
+p231677,Rashford,England,Premier League,Aston Villa
 p236703,Raum,Germany,Bundesliga,RB Leipzig
 p204639,Savić,Montenegro,Trendyol Süper Lig,Trabzonspor
 p233195,Schlager,Austria,Bundesliga,RB Leipzig
@@ -2126,7 +2127,7 @@ p228789,Robert Sánchez,Spain,Premier League,Chelsea
 p248465,Maatsen,Holland,Premier League,Aston Villa
 p221342,Pablo Maffeo,Argentina,LALIGA EA SPORTS,RCD Mallorca
 p212442,José Sá,Portugal,Premier League,Wolves
-p256675,Marmoush,Egypt,Bundesliga,Frankfurt
+p256675,Marmoush,Egypt,Premier League,Manchester City
 p260815,Arnau Martínez,Spain,LALIGA EA SPORTS,Girona FC
 p224031,Marušić,Montenegro,Serie A Enilive,Latium
 p236461,Mateta,France,Premier League,Crystal Palace
@@ -2463,7 +2464,7 @@ p224411,Gonçalo Guedes,Portugal,Premier League,Wolves
 p219581,Gigot,France,Serie A Enilive,Latium
 p240507,Gomes,England,Ligue 1 McDonald's,LOSC Lille
 p251892,Beto,Portugal,Premier League,Everton
-p255069,Nico González,Spain,Liga Portugal,FC Porto
+p255069,Nico González,Spain,Premier League,Manchester City
 p167959,Marcelo Grohe,Brazil,ROSHN Saudi League,Al Kholood
 p190113,Günok,Turkey,Trendyol Süper Lig,Beşiktaş
 p271121,Hartman,Holland,Eredivisie,Feyenoord
@@ -4531,7 +4532,7 @@ p210719,Kempf,Germany,Serie A Enilive,Como
 p224263,Kenny,England,Bundesliga 2,Hertha BSC
 p220140,Kent,England,Scottish Prem,Hearts
 p194845,Khazri,Tunisia,Ligue 1 McDonald's,Montpellier
-p277031,Khusanov,Uzbekistan,Ligue 1 McDonald's,RC Lens
+p277031,Khusanov,Uzbekistan,Premier League,Manchester City
 p274616,Kılıçsoy,Turkey,Trendyol Süper Lig,Beşiktaş
 p73580,Kinský,Czech Republic,Česká Liga,Slavia Praha
 p242531,Kitolano,Norway,Eredivisie,Sparta Rotterdam
