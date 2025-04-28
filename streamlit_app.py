@@ -126,7 +126,7 @@ def generate_card_image(name, country, league, club, background_image, output_di
         text_y = 670
 
         # Set text color based on card type
-        text_color = (255, 255, 255) if card_type == 'LIVE' else (252,254,32) #(66, 52, 15)
+        text_color = (255, 255, 255) if card_type == 'LIVE' else (66, 52, 15) #(252,254,32) 
         #text_color = (255, 255, 255)
         #text_color = (66, 52, 15)
         draw.text((text_x, text_y), name_text_capitalized, fill=text_color, font=font_name)
@@ -179,7 +179,7 @@ def create_collage(images, output_path, event_name="Event Name"):
 
     collage = collage.resize((3947, 2255), Image.LANCZOS)
 
-    background_image_path = os.path.join(os.getcwd(), "Leaks3.png")
+    background_image_path = os.path.join(os.getcwd(), "Leaks4.png")
     background = Image.open(background_image_path)
 
     x_position = (background.width - collage.width) // 2
