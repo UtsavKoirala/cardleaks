@@ -126,7 +126,7 @@ def generate_card_image(name, country, league, club, background_image, output_di
         text_y = 670
 
         # Set text color based on card type
-        text_color = (255, 255, 255) if card_type == 'LIVE' else (66, 52, 15) #(252,254,32) 
+        text_color = (66, 52, 15) #if card_type == 'LIVE' else (66, 52, 15) #(252,254,32) 
         #text_color = (255, 255, 255)
         #text_color = (66, 52, 15)
         draw.text((text_x, text_y), name_text_capitalized, fill=text_color, font=font_name)
