@@ -179,7 +179,7 @@ def create_collage(images, output_path, event_name="Event Name"):
 
     collage = collage.resize((3947, 2255), Image.LANCZOS)
 
-    background_image_path = os.path.join(os.getcwd(), "Leaks2.png")
+    background_image_path = os.path.join(os.getcwd(), "Leaks6.png")
     background = Image.open(background_image_path).convert("RGBA")
 
     x_position = (background.width - collage.width) // 2
